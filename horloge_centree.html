@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta charset="UTF-8">
+	<title>Test JS</title>
+	<style>
+		.parent {
+			height: 30em ;
+			line-height: 30em ;
+			white-space: nowrap ;
+		}
+		#monHorloge {
+			color: blue ;
+			font-size: 5em ;
+		}
+	</style>
+ </head>
+  
+<body>
+	<div class='parent'>
+	<center><p id='monHorloge'></p></center>
+	</div>
+		<script>
+			setInterval(
+				function() {
+					var dt=new Date();
+					var horloge=dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+					document.getElementById("monHorloge").innerHTML = horloge;} ,
+				250);	
+		</script>		
+		
+</body>
+</html>
